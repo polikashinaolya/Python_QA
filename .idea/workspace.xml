@@ -1,35 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="49140c39-0db8-494b-acd1-291f159b22e1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Scripts/activate" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scripts/activate.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scripts/activate.fish" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scripts/activate.ps1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scripts/activate.xsh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scripts/activate_this.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scripts/deactivate.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scripts/pip-3.8.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scripts/pip.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scripts/pip3.8.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scripts/pip3.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scripts/pydoc.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scripts/python.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scripts/pythonw.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scripts/wheel-3.8.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scripts/wheel.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scripts/wheel3.8.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scripts/wheel3.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pyvenv.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Python_QA.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Python_QA.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="49140c39-0db8-494b-acd1-291f159b22e1" name="Default Changelist" comment="запуск через pytest">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/add_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_add_group.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/activate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/activate.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/activate.fish" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/activate.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/activate.xsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/activate_this.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/deactivate.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/pip-3.8.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/pip.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/pip3.8.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/pip3.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/pydoc.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/python.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/pythonw.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/wheel-3.8.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/wheel.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/wheel3.8.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/wheel3.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_add_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_add_group.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -47,6 +51,12 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="B:\PycharmProjects\Python_QA" />
+      <recent name="B:\PycharmProjects\Python_QA\First_tests" />
+    </key>
   </component>
   <component name="RunManager" selected="Python tests.pytest in test_add_group.py">
     <configuration name="Unittests in test_add_group.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
@@ -115,39 +125,62 @@
       <option name="project" value="LOCAL" />
       <updated>1619420212014</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="запуск через pytest">
+      <created>1619428353166</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1619428353166</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="первый вариант добавления группы" />
-    <option name="LAST_COMMIT_MESSAGE" value="первый вариант добавления группы" />
+    <MESSAGE value="запуск через pytest" />
+    <option name="LAST_COMMIT_MESSAGE" value="запуск через pytest" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="454" y="25" key="CommitChangelistDialog2" timestamp="1619420209159">
+    <state x="460" y="26" key="CommitChangelistDialog2" timestamp="1619451803182">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="454" y="25" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1619420209159" />
+    <state x="460" y="26" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1619451803182" />
+    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1619443124498">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1619443124498" />
     <state x="580" y="172" key="FileChooserDialogImpl" timestamp="1619286423342">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="580" y="172" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1619286423342" />
-    <state width="1579" height="222" key="GridCell.Tab.0.bottom" timestamp="1619428252053">
+    <state width="1579" height="222" key="GridCell.Tab.0.bottom" timestamp="1619451504142">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1619428252053" />
-    <state width="1579" height="222" key="GridCell.Tab.0.center" timestamp="1619428252053">
+    <state width="1579" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1619451504142" />
+    <state width="1579" height="222" key="GridCell.Tab.0.center" timestamp="1619451504142">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="222" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1619428252053" />
-    <state width="1579" height="222" key="GridCell.Tab.0.left" timestamp="1619428252053">
+    <state width="1579" height="222" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1619451504142" />
+    <state width="1579" height="222" key="GridCell.Tab.0.left" timestamp="1619451504141">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="222" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1619428252053" />
-    <state width="1579" height="222" key="GridCell.Tab.0.right" timestamp="1619428252053">
+    <state width="1579" height="222" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1619451504141" />
+    <state width="1579" height="222" key="GridCell.Tab.0.right" timestamp="1619451504142">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="222" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1619428252053" />
+    <state width="1579" height="222" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1619451504142" />
     <state x="301" y="73" key="SettingsEditor" timestamp="1619427802158">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
