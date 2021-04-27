@@ -120,7 +120,7 @@ class Add_Contact(unittest.TestCase):
         driver.find_element_by_name("notes").clear()
         driver.find_element_by_name("notes").send_keys(contact_str.notes)
 
-    def contact_fill_form_picture(self, driver):  #пока не работает
+    def contact_fill_form_picture(self, driver, Userpic):  #не реализовано
         driver = self.driver
         driver.find_element_by_name("photo").click()
         driver.find_element_by_name("photo").clear()
