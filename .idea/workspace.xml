@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49140c39-0db8-494b-acd1-291f159b22e1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/test_add_contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_add_contact.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_add_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_add_group.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,7 +179,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619524229867</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="исправления для унификации">
+      <created>1619524540549</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1619524540549</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -206,10 +214,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="исправления для унификации" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="460" y="10" key="CommitChangelistDialog2" timestamp="1619524226964">
+    <state x="460" y="10" key="CommitChangelistDialog2" timestamp="1619524539644">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="460" y="10" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1619524226964" />
+    <state x="460" y="10" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1619524539644" />
     <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1619443124498">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

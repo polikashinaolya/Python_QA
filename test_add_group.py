@@ -4,7 +4,7 @@ import unittest
 from group import Group
 
 
-class Add_Group(unittest.TestCase):
+class AddGroup(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Firefox()
         self.driver.implicitly_wait(50)
