@@ -29,15 +29,20 @@ class Add_Contact(unittest.TestCase):
         sleep(5)
         self.finish_add_contact(driver)
 
-    def finish_add_contact(self, driver):
-        #return home page
-        driver.find_element_by_link_text("home page").click()
-        sleep(5)
-        #logout
-        driver.find_element_by_link_text("Logout").click()
+    def open_homepage(self, driver):
+        driver.get("http://localhost/addressbook/")
 
-    def confirm_add_contact(self, driver):
-        driver.find_element_by_xpath("(//input[@name='submit'])[2]").click()
+    def login(self, driver, username, password):
+        driver.find_element_by_name("user").click()
+        driver.find_element_by_name("user").clear()
+        driver.find_element_by_name("user").send_keys(username)
+        driver.find_element_by_name("pass").click()
+        driver.find_element_by_name("pass").clear()
+        driver.find_element_by_name("pass").send_keys(password)
+        driver.find_element_by_xpath("//input[@value='Login']").click()
+
+    def open_create_contact_page(self, driver):
+        driver.find_element_by_link_text("add new").click()
 
     def fill_form_contact_bday(self, driver, contact_bday):
         driver.find_element_by_name("bday").click()
@@ -115,27 +120,21 @@ class Add_Contact(unittest.TestCase):
         driver.find_element_by_name("notes").clear()
         driver.find_element_by_name("notes").send_keys(contact_str.notes)
 
-    def contact_fill_form_picture(self, driver):
+    def contact_fill_form_picture(self, driver):  #пока не работает
         driver = self.driver
-        driver.get("http://localhost/addressbook/edit.php")
         driver.find_element_by_name("photo").click()
         driver.find_element_by_name("photo").clear()
         driver.find_element_by_name("photo").send_keys("C:\\fakepath\\2020-01-20_18-35-30.png")
 
-    def open_create_contact_page(self, driver):
-        driver.find_element_by_link_text("add new").click()
+    def confirm_add_contact(self, driver):
+        driver.find_element_by_xpath("(//input[@name='submit'])[2]").click()
 
-    def open_homepage(self, driver):
-        driver.get("http://localhost/addressbook/")
-
-    def login(self, driver, username, password):
-        driver.find_element_by_name("user").click()
-        driver.find_element_by_name("user").clear()
-        driver.find_element_by_name("user").send_keys(username)
-        driver.find_element_by_name("pass").click()
-        driver.find_element_by_name("pass").clear()
-        driver.find_element_by_name("pass").send_keys(password)
-        driver.find_element_by_xpath("//input[@value='Login']").click()
+    def finish_add_contact(self, driver):
+        #return home page
+        driver.find_element_by_link_text("home page").click()
+        sleep(5)
+        #logout
+        driver.find_element_by_link_text("Logout").click()
 
     def tearDown(self):
         self.driver.quit()

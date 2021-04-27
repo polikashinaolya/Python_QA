@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49140c39-0db8-494b-acd1-291f159b22e1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/userpic.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/contact.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Group.py" beforeDir="false" afterPath="$PROJECT_DIR$/group.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_add_contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_add_contact.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_add_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_add_group.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +161,21 @@
       <option name="project" value="LOCAL" />
       <updated>1619512603231</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Создан и импортирован класс Contact_bday для заполнения даты в форме контакта">
+      <created>1619523210696</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1619523210696</updated>
+    </task>
+    <task id="LOCAL-00008" summary="созданы классы для заполнения строковых полей и даты контакта">
+      <created>1619523318278</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1619523318278</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -181,13 +197,15 @@
     <MESSAGE value="1) создала файл Group.py с классом Group содержащим необходимые параметры&#10;2) импортировала class Group в тест&#10;3) создала тест с добавлением пустой группы" />
     <MESSAGE value="Первый вариант, не работает добавление картинки" />
     <MESSAGE value="Создан и импортирован класс Contact_str для заполнения строковых полей формы контакта" />
-    <option name="LAST_COMMIT_MESSAGE" value="Создан и импортирован класс Contact_str для заполнения строковых полей формы контакта" />
+    <MESSAGE value="Создан и импортирован класс Contact_bday для заполнения даты в форме контакта" />
+    <MESSAGE value="созданы классы для заполнения строковых полей и даты контакта" />
+    <option name="LAST_COMMIT_MESSAGE" value="созданы классы для заполнения строковых полей и даты контакта" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="460" y="10" key="CommitChangelistDialog2" timestamp="1619523208148">
+    <state x="460" y="10" key="CommitChangelistDialog2" timestamp="1619523315536">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="460" y="10" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1619523208148" />
+    <state x="460" y="10" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1619523315536" />
     <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1619443124498">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from selenium import webdriver
 import unittest
-from Group import Group
+from group import Group
 
 
 class Add_Group(unittest.TestCase):
@@ -9,7 +9,7 @@ class Add_Group(unittest.TestCase):
         self.driver = webdriver.Firefox()
         self.driver.implicitly_wait(50)
 
-    def test_add_resr_group(self):
+    def test_add_new_group(self):
         driver = self.driver
         self.open_homepage(driver)
         self.login(driver, username="admin", password="secret")
@@ -18,7 +18,7 @@ class Add_Group(unittest.TestCase):
         self.return_to_groups_page(driver)
         self.logout(driver)
 
-    def test_add_empty_group(self):
+    def test_add_new_empty_group(self):
         driver = self.driver
         self.open_homepage(driver)
         self.login(driver, username="admin", password="secret")
