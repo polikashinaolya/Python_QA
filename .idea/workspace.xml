@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49140c39-0db8-494b-acd1-291f159b22e1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/contact.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new_contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_add_contact.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/contact.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_add_contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_add_contact.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619469680247</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Создан и импортирован класс Contact_str для заполнения строковых полей формы контакта">
+      <created>1619512603231</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1619512603231</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -173,13 +180,14 @@
     <MESSAGE value="создание вспомогательных методов класса Add_Group для лучшей читаемости" />
     <MESSAGE value="1) создала файл Group.py с классом Group содержащим необходимые параметры&#10;2) импортировала class Group в тест&#10;3) создала тест с добавлением пустой группы" />
     <MESSAGE value="Первый вариант, не работает добавление картинки" />
-    <option name="LAST_COMMIT_MESSAGE" value="Первый вариант, не работает добавление картинки" />
+    <MESSAGE value="Создан и импортирован класс Contact_str для заполнения строковых полей формы контакта" />
+    <option name="LAST_COMMIT_MESSAGE" value="Создан и импортирован класс Contact_str для заполнения строковых полей формы контакта" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="460" y="10" key="CommitChangelistDialog2" timestamp="1619469679216">
+    <state x="460" y="10" key="CommitChangelistDialog2" timestamp="1619512601638">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="460" y="10" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1619469679216" />
+    <state x="460" y="10" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1619512601638" />
     <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1619443124498">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -188,22 +196,22 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="580" y="172" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1619286423342" />
-    <state width="1579" height="222" key="GridCell.Tab.0.bottom" timestamp="1619512484238">
+    <state width="1579" height="222" key="GridCell.Tab.0.bottom" timestamp="1619522952704">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1619512484238" />
-    <state width="1579" height="222" key="GridCell.Tab.0.center" timestamp="1619512484237">
+    <state width="1579" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1619522952704" />
+    <state width="1579" height="222" key="GridCell.Tab.0.center" timestamp="1619522952704">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="222" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1619512484237" />
-    <state width="1579" height="222" key="GridCell.Tab.0.left" timestamp="1619512484237">
+    <state width="1579" height="222" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1619522952704" />
+    <state width="1579" height="222" key="GridCell.Tab.0.left" timestamp="1619522952704">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="222" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1619512484237" />
-    <state width="1579" height="222" key="GridCell.Tab.0.right" timestamp="1619512484238">
+    <state width="1579" height="222" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1619522952704" />
+    <state width="1579" height="222" key="GridCell.Tab.0.right" timestamp="1619522952704">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="222" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1619512484238" />
+    <state width="1579" height="222" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1619522952704" />
     <state x="301" y="73" key="SettingsEditor" timestamp="1619427802158">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
