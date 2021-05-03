@@ -11,26 +11,22 @@ class AddContact(unittest.TestCase):
         self.driver = webdriver.Firefox()
         self.driver.implicitly_wait(30)
 
-    def test_add_new_cont(self):
+    def test_add_contact(self):
         driver = self.driver
-        self.open_homepage(driver)
         self.login(driver, username="admin", password="secret")
-        self.open_create_contact_page(driver)
-        self.fill_form_contact(driver, Contact(firstname="Olya", middlename= "asddas", lastname="fsdas", nickname="bnbdas",
+        self.add_contact(driver, Contact(firstname="Olya", middlename= "asddas", lastname="fsdas", nickname="bnbdas",
                                                        title="asdcvas", company="asdzxas", address="asqwdas", phone_home="123",
                                                        phone_mobile="234", phone_work="345", fax="456", email="q@mail.ru",
                                                        email2="s@", email3="3@", homepage="aerwe", address2="assdfsdfs",
                                                        phone2="asdsdfdfas", notes="asqwqdas", bday="1", bmonth="January",
                                                         byear="1001", aday="2", amonth="February", ayear="2002"))
-        sleep(5)
-        self.confirm_add_contact(driver)
-        sleep(5)
-        self.finish_add_contact(driver)
+        self.logout(driver)
 
     def open_homepage(self, driver):
         driver.get("http://localhost/addressbook/")
 
     def login(self, driver, username, password):
+        self.open_homepage(driver)
         driver.find_element_by_name("user").click()
         driver.find_element_by_name("user").clear()
         driver.find_element_by_name("user").send_keys(username)
@@ -38,11 +34,12 @@ class AddContact(unittest.TestCase):
         driver.find_element_by_name("pass").clear()
         driver.find_element_by_name("pass").send_keys(password)
         driver.find_element_by_xpath("//input[@value='Login']").click()
+        self.open_create_contact_page(driver)
 
     def open_create_contact_page(self, driver):
         driver.find_element_by_link_text("add new").click()
 
-    def fill_form_contact(self, driver, contact):
+    def add_contact(self, driver, contact):
         #добавляем строковые поля
         driver.find_element_by_name("firstname").click()
         driver.find_element_by_name("firstname").clear()
@@ -117,11 +114,12 @@ class AddContact(unittest.TestCase):
         driver.find_element_by_name("ayear").click()
         driver.find_element_by_name("ayear").clear()
         driver.find_element_by_name("ayear").send_keys(contact.ayear)
+        self.confirm_add_contact(driver)
 
     def confirm_add_contact(self, driver):
         driver.find_element_by_xpath("(//input[@name='submit'])[2]").click()
 
-    def finish_add_contact(self, driver):
+    def logout(self, driver):
         #return home page
         driver.find_element_by_link_text("home page").click()
         sleep(5)
