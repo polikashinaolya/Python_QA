@@ -9,25 +9,26 @@ class AddGroup(unittest.TestCase):
         self.driver = webdriver.Firefox()
         self.driver.implicitly_wait(50)
 
-    def test_add_new_group(self):
-        driver = self.driver
-        self.login(driver, username="admin", password="secret")
-        self.create_group(driver, Group(name='test', header="testtest", footer="test1"))
-        self.logout(driver)
+    def test_add_group(self):
+        self.login(username="admin", password="secret")
+        self.create_group(Group(name='test', header="testtest", footer="test1"))
+        self.logout()
 
     def test_add_empty_group(self):
-        driver = self.driver
-        self.login(driver, username="admin", password="secret")
-        self.create_group(driver, Group(name='', header="", footer=""))
-        self.logout(driver)
+        self.login(username="admin", password="secret")
+        self.create_group(Group(name='', header="", footer=""))
+        self.logout()
 
-    def logout(self, driver):
+    def logout(self):
+        driver = self.driver
         driver.find_element_by_link_text("Logout").click()
 
-    def return_to_groups_page(self, driver):
+    def return_to_groups_page(self):
+        driver = self.driver
         driver.find_element_by_link_text("group page").click()
 
-    def create_group(self, driver, group):
+    def create_group(self, group):
+        driver = self.driver
         # init new group
         driver.find_element_by_name("new").click()
         # fill form
@@ -42,13 +43,15 @@ class AddGroup(unittest.TestCase):
         driver.find_element_by_name("group_footer").send_keys(group.footer)
         # submit create group
         driver.find_element_by_name("submit").click()
-        self.return_to_groups_page(driver)
+        self.return_to_groups_page()
 
-    def open_groups_page(self, driver):
+    def open_groups_page(self):
+        driver = self.driver
         driver.find_element_by_link_text("groups").click()
 
-    def login(self, driver, username, password):
-        self.open_homepage(driver)
+    def login(self, username, password):
+        driver = self.driver
+        self.open_homepage()
         driver.find_element_by_name("user").click()
         driver.find_element_by_name("user").clear()
         driver.find_element_by_name("user").send_keys(username)
@@ -56,9 +59,10 @@ class AddGroup(unittest.TestCase):
         driver.find_element_by_name("pass").clear()
         driver.find_element_by_name("pass").send_keys(password)
         driver.find_element_by_xpath("//input[@value='Login']").click()
-        self.open_groups_page(driver)
+        self.open_groups_page()
 
-    def open_homepage(self, driver):
+    def open_homepage(self):
+        driver = self.driver
         driver.get("http://localhost/addressbook/")
 
     def tearDown(self):

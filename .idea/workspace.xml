@@ -41,7 +41,7 @@
       <recent name="B:\PycharmProjects\Python_QA\First_tests" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.pytest in test_add_contact.py">
+  <component name="RunManager" selected="Python tests.pytest in test_add_group.py">
     <configuration name="Unittests in test_add_group.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="Python_QA" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -88,8 +88,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.pytest in test_add_contact.py" />
         <item itemvalue="Python tests.pytest in test_add_group.py" />
+        <item itemvalue="Python tests.pytest in test_add_contact.py" />
         <item itemvalue="Python tests.Unittests in test_add_group.py" />
       </list>
     </recent_temporary>
@@ -201,7 +201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619552264728</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="только высокоуровневые проверки">
+      <created>1620023768110</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1620023768110</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -230,13 +237,14 @@
     <MESSAGE value="исправления для унификации" />
     <MESSAGE value="исправлено название класса" />
     <MESSAGE value="Были исправлены ошибки:&#10;-объеденены 2 класса contact&#10;-исправлены переметры home, mobile, work&#10;-исправлены названия классов" />
-    <option name="LAST_COMMIT_MESSAGE" value="Были исправлены ошибки:&#10;-объеденены 2 класса contact&#10;-исправлены переметры home, mobile, work&#10;-исправлены названия классов" />
+    <MESSAGE value="только высокоуровневые проверки" />
+    <option name="LAST_COMMIT_MESSAGE" value="только высокоуровневые проверки" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="460" y="0" key="CommitChangelistDialog2" timestamp="1619552754270">
+    <state x="460" y="0" key="CommitChangelistDialog2" timestamp="1620023776414">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="460" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1619552754270" />
+    <state x="460" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1620023776414" />
     <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1619443124498">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -245,26 +253,26 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="580" y="172" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1619286423342" />
-    <state width="1579" height="222" key="GridCell.Tab.0.bottom" timestamp="1620023470490">
+    <state width="1579" height="222" key="GridCell.Tab.0.bottom" timestamp="1620024809890">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1620023470490" />
-    <state width="1579" height="222" key="GridCell.Tab.0.center" timestamp="1620023470490">
+    <state width="1579" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1620024809890" />
+    <state width="1579" height="222" key="GridCell.Tab.0.center" timestamp="1620024809889">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="222" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1620023470490" />
-    <state width="1579" height="222" key="GridCell.Tab.0.left" timestamp="1620023470489">
+    <state width="1579" height="222" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1620024809889" />
+    <state width="1579" height="222" key="GridCell.Tab.0.left" timestamp="1620024809889">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="222" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1620023470489" />
-    <state width="1579" height="222" key="GridCell.Tab.0.right" timestamp="1620023470490">
+    <state width="1579" height="222" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1620024809889" />
+    <state width="1579" height="222" key="GridCell.Tab.0.right" timestamp="1620024809890">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="222" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1620023470490" />
-    <state x="301" y="73" key="SettingsEditor" timestamp="1619427802158">
+    <state width="1579" height="222" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1620024809890" />
+    <state x="301" y="73" key="SettingsEditor" timestamp="1620024247261">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="301" y="73" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1619427802158" />
+    <state x="301" y="73" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1620024247261" />
     <state x="496" y="254" key="com.intellij.ide.util.TipDialog" timestamp="1620022517797">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
