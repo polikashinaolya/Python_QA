@@ -37,7 +37,8 @@ class AddContact(unittest.TestCase):
         driver.find_element_by_xpath("//input[@value='Login']").click()
         self.open_create_contact_page()
 
-    def open_create_contact_page(self, driver):
+    def open_create_contact_page(self):
+        driver = self.driver
         driver.find_element_by_link_text("add new").click()
 
     def add_contact(self, contact):
