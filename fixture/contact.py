@@ -97,3 +97,11 @@ class ContactHelper:
         driver = self.app.driver
         driver.find_element_by_link_text("home page").click()
 
+    def delete_first(self):
+        driver = self.app.driver
+        driver.find_element_by_name("selected[]").click()
+        driver.find_element_by_value("Delete").click()
+        driver.switch_to_alert().accept()
+
+
+
