@@ -54,3 +54,5 @@ class GroupHelper:
         driver.find_element_by_name("group_footer").send_keys(group.footer)
         driver.find_element_by_name("update").click()
         self.return_to_groups_page()
+
+#для дз7

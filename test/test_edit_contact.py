@@ -12,3 +12,5 @@ def test_add_contact(app):
                                phone2="asdsdfdfas", notes="asqwqdas", bday="1", bmonth="January",
                                byear="1001", aday="2", amonth="February", ayear="2002"))
     app.session.logout()
+
+#для дз7
