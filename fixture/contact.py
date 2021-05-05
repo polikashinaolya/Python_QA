@@ -3,15 +3,14 @@ from selenium.webdriver.support.ui import Select
 class ContactHelper:
     def __init__(self, app):
         self.app = app
-
-    #для создания контакта
+   
     def open_create_contact_page(self):
         driver = self.app.driver
         driver.find_element_by_link_text("add new").click()
 
-    def create(self, contact):
+    #для заполнения полей
+    def fill_form_contact(self, contact):
         driver = self.app.driver
-        self.open_create_contact_page()
         # добавляем строковые поля
         driver.find_element_by_name("firstname").click()
         driver.find_element_by_name("firstname").clear()
@@ -86,6 +85,12 @@ class ContactHelper:
         driver.find_element_by_name("ayear").click()
         driver.find_element_by_name("ayear").clear()
         driver.find_element_by_name("ayear").send_keys(contact.ayear)
+
+
+    def create(self, contact):
+        driver = self.app.driver
+        self.open_create_contact_page()
+        self.fill_form_contact(contact)
         self.confirm_add_contact()
         self.return_to_home_page()
 
@@ -100,8 +105,17 @@ class ContactHelper:
     def delete_first(self):
         driver = self.app.driver
         driver.find_element_by_name("selected[]").click()
-        driver.find_element_by_value("Delete").click()
+        driver.find_element_by_xpath("//input[@value='Delete']").click()
         driver.switch_to_alert().accept()
+
+    def edit_first(self, contact):
+        driver = self.app.driver
+        driver.find_element_by_css_selector("img[alt=\"Edit\"]").click()
+        self.fill_form_contact(contact)
+        driver.find_element_by_name("update").click()
+        self.return_to_home_page()
+
+
 
 
 
