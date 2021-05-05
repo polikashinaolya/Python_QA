@@ -9,7 +9,7 @@ class ContactHelper:
         driver = self.app.driver
         driver.find_element_by_link_text("add new").click()
 
-    def add_contact(self, contact):
+    def create(self, contact):
         driver = self.app.driver
         self.open_create_contact_page()
         # добавляем строковые поля
