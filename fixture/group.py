@@ -30,7 +30,7 @@ class GroupHelper:
         driver.find_element_by_name("submit").click()
         self.return_to_groups_page()
 
-    def delete_first(self, group):
+    def delete_first(self):
         driver = self.app.driver
         self.open_groups_page()
         driver.find_element_by_name("selected[]").click()
