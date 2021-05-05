@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49140c39-0db8-494b-acd1-291f159b22e1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test_delete_group.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test_edit_group.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixture/contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixture/contact.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixture/session.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixture/session.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_add_contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_add_contact.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_add_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_add_group.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixture/group.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixture/group.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +45,7 @@
       <recent name="B:\PycharmProjects\Python_QA\First_tests" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.pytest in test">
+  <component name="RunManager" selected="Python tests.pytest in test_delete_group.py">
     <configuration name="group" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python_QA" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -67,20 +65,6 @@
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
       <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittests in test_add_group.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="Python_QA" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/test/test_add_group.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <configuration name="pytest in test" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
@@ -128,13 +112,28 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="pytest in test_delete_group.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="Python_QA" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/test/test_delete_group.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.pytest in test_delete_group.py" />
         <item itemvalue="Python tests.pytest in test" />
         <item itemvalue="Python tests.pytest in test_add_group.py" />
         <item itemvalue="Python.group" />
         <item itemvalue="Python tests.pytest in test_add_contact.py" />
-        <item itemvalue="Python tests.Unittests in test_add_group.py" />
       </list>
     </recent_temporary>
   </component>
@@ -328,22 +327,22 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="580" y="172" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1619286423342" />
-    <state width="1579" height="148" key="GridCell.Tab.0.bottom" timestamp="1620229106326">
+    <state width="1579" height="148" key="GridCell.Tab.0.bottom" timestamp="1620232365511">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="148" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1620229106326" />
-    <state width="1579" height="148" key="GridCell.Tab.0.center" timestamp="1620229106325">
+    <state width="1579" height="148" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1620232365511" />
+    <state width="1579" height="148" key="GridCell.Tab.0.center" timestamp="1620232365511">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="148" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1620229106325" />
-    <state width="1579" height="148" key="GridCell.Tab.0.left" timestamp="1620229106325">
+    <state width="1579" height="148" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1620232365511" />
+    <state width="1579" height="148" key="GridCell.Tab.0.left" timestamp="1620232365511">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="148" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1620229106325" />
-    <state width="1579" height="148" key="GridCell.Tab.0.right" timestamp="1620229106325">
+    <state width="1579" height="148" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1620232365511" />
+    <state width="1579" height="148" key="GridCell.Tab.0.right" timestamp="1620232365511">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="148" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1620229106325" />
+    <state width="1579" height="148" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1620232365511" />
     <state x="301" y="73" key="SettingsEditor" timestamp="1620024247261">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
