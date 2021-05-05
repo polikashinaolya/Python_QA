@@ -2,15 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49140c39-0db8-494b-acd1-291f159b22e1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/fixture/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fixture/contact.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fixture/group.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fixture/session.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixture/application.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/contact.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/group.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/group.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_add_contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_add_contact.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_add_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_add_group.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixture/application.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixture/application.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_add_contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_add_contact.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_add_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_add_group.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +48,7 @@
       <recent name="B:\PycharmProjects\Python_QA\First_tests" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.pytest in test_add_group.py">
+  <component name="RunManager" selected="Python tests.pytest in test">
     <configuration name="Unittests in test_add_group.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="Python_QA" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -62,6 +60,21 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;$PROJECT_DIR$/test/test_add_group.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest in test" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="Python_QA" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/test&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
@@ -97,8 +110,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.pytest in test_add_group.py" />
+        <item itemvalue="Python tests.pytest in test" />
         <item itemvalue="Python tests.pytest in test_add_contact.py" />
+        <item itemvalue="Python tests.pytest in test_add_group.py" />
         <item itemvalue="Python tests.Unittests in test_add_group.py" />
       </list>
     </recent_temporary>
@@ -238,7 +252,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620135496451</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="созданы пакеты для разделения ответственности">
+      <created>1620202297348</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1620202297348</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -270,13 +291,14 @@
     <MESSAGE value="только высокоуровневые проверки" />
     <MESSAGE value="только высокоуровневые проверки (убрала ссылку на драйвер)" />
     <MESSAGE value="создана фикстура для тестов" />
-    <option name="LAST_COMMIT_MESSAGE" value="создана фикстура для тестов" />
+    <MESSAGE value="созданы пакеты для разделения ответственности" />
+    <option name="LAST_COMMIT_MESSAGE" value="созданы пакеты для разделения ответственности" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="460" y="0" key="CommitChangelistDialog2" timestamp="1620135494840">
+    <state x="460" y="0" key="CommitChangelistDialog2" timestamp="1620202295854">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="460" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1620135494840" />
+    <state x="460" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1620202295854" />
     <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1620032578042">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -285,22 +307,22 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="580" y="172" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1619286423342" />
-    <state width="1579" height="222" key="GridCell.Tab.0.bottom" timestamp="1620202134256">
+    <state width="1579" height="222" key="GridCell.Tab.0.bottom" timestamp="1620216524550">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1620202134256" />
-    <state width="1579" height="222" key="GridCell.Tab.0.center" timestamp="1620202134256">
+    <state width="1579" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1620216524550" />
+    <state width="1579" height="222" key="GridCell.Tab.0.center" timestamp="1620216524549">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="222" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1620202134256" />
-    <state width="1579" height="222" key="GridCell.Tab.0.left" timestamp="1620202134256">
+    <state width="1579" height="222" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1620216524549" />
+    <state width="1579" height="222" key="GridCell.Tab.0.left" timestamp="1620216524549">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="222" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1620202134256" />
-    <state width="1579" height="222" key="GridCell.Tab.0.right" timestamp="1620202134256">
+    <state width="1579" height="222" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1620216524549" />
+    <state width="1579" height="222" key="GridCell.Tab.0.right" timestamp="1620216524550">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="222" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1620202134256" />
+    <state width="1579" height="222" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1620216524550" />
     <state x="301" y="73" key="SettingsEditor" timestamp="1620024247261">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
