@@ -1,4 +1,3 @@
-from selenium.webdriver.support.ui import Select
 
 class ContactHelper:
     def __init__(self, app):
@@ -68,20 +67,17 @@ class ContactHelper:
         driver.find_element_by_name("notes").send_keys(contact.notes)
         # добавляем даты
         driver.find_element_by_name("bday").click()
-        Select(driver.find_element_by_name("bday")).select_by_visible_text(contact.bday)
-        driver.find_element_by_xpath("//option[@value='1']").click()
+        driver.find_element_by_css_selector('select[name="bday"] option[value="1"]').click()
         driver.find_element_by_name("bmonth").click()
-        Select(driver.find_element_by_name("bmonth")).select_by_visible_text(contact.bmonth)
-        driver.find_element_by_xpath("//option[@value='January']").click()
+        driver.find_element_by_css_selector('select[name="bmonth"] option[value="January"]').click()
         driver.find_element_by_name("byear").click()
         driver.find_element_by_name("byear").clear()
         driver.find_element_by_name("byear").send_keys(contact.byear)
+        #добавлякм вторые даты
         driver.find_element_by_name("aday").click()
-        Select(driver.find_element_by_name("aday")).select_by_visible_text(contact.aday)
-        driver.find_element_by_xpath("(//option[@value='2'])[2]").click()
+        driver.find_element_by_css_selector('select[name="aday"] option[value="1"]').click()
         driver.find_element_by_name("amonth").click()
-        Select(driver.find_element_by_name("amonth")).select_by_visible_text(contact.amonth)
-        driver.find_element_by_xpath("(//option[@value='February'])[2]").click()
+        driver.find_element_by_css_selector('select[name="amonth"] option[value="February"]').click()
         driver.find_element_by_name("ayear").click()
         driver.find_element_by_name("ayear").clear()
         driver.find_element_by_name("ayear").send_keys(contact.ayear)
@@ -96,7 +92,7 @@ class ContactHelper:
 
     def confirm_add_contact(self):
         driver = self.app.driver
-        driver.find_element_by_xpath("(//input[@name='submit'])[2]").click()
+        driver.find_element_by_css_selector('input[type="submit"]').click()
 
     def return_to_home_page(self):
         driver = self.app.driver
@@ -104,13 +100,13 @@ class ContactHelper:
 
     def delete_first(self):
         driver = self.app.driver
-        driver.find_element_by_name("selected[]").click()
-        driver.find_element_by_xpath("//input[@value='Delete']").click()
+        driver.find_element_by_css_selector('input[name="selected[]"]').click()
+        driver.find_element_by_css_selector('input[value="Delete"]').click()
         driver.switch_to_alert().accept()
 
     def edit_first(self, contact):
         driver = self.app.driver
-        driver.find_element_by_css_selector("img[alt=\"Edit\"]").click()
+        driver.find_element_by_css_selector('img[title="Edit"]').click()
         self.fill_form_contact(contact)
         driver.find_element_by_name("update").click()
         self.return_to_home_page()
