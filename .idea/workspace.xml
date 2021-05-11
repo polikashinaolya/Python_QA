@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="49140c39-0db8-494b-acd1-291f159b22e1" name="Default Changelist" comment="добавлен тест на редактирование первого контакта, исправлены ошибки">
+    <list default="true" id="49140c39-0db8-494b-acd1-291f159b22e1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixture/contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixture/contact.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_delete_contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_delete_contact.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_edit_contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_edit_contact.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -306,7 +307,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620237248403</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="переделала все на css локаторы без указания порядкового номера выбираемого элемента">
+      <created>1620550829502</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1620550829502</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -344,13 +352,14 @@
     <MESSAGE value="исправление - при удаление группы мы не передаем объект класса Group" />
     <MESSAGE value="добавлен тест на удаление первого контакта" />
     <MESSAGE value="добавлен тест на редактирование первого контакта, исправлены ошибки" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавлен тест на редактирование первого контакта, исправлены ошибки" />
+    <MESSAGE value="переделала все на css локаторы без указания порядкового номера выбираемого элемента" />
+    <option name="LAST_COMMIT_MESSAGE" value="переделала все на css локаторы без указания порядкового номера выбираемого элемента" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="460" y="0" key="CommitChangelistDialog2" timestamp="1620237673428">
+    <state x="460" y="0" key="CommitChangelistDialog2" timestamp="1620550827487">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="460" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1620237673428" />
+    <state x="460" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1620550827487" />
     <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1620237603575">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -359,22 +368,22 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="580" y="172" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1619286423342" />
-    <state width="1579" height="148" key="GridCell.Tab.0.bottom" timestamp="1620550612830">
+    <state width="1579" height="148" key="GridCell.Tab.0.bottom" timestamp="1620550886358">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="148" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1620550612830" />
-    <state width="1579" height="148" key="GridCell.Tab.0.center" timestamp="1620550612830">
+    <state width="1579" height="148" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1620550886358" />
+    <state width="1579" height="148" key="GridCell.Tab.0.center" timestamp="1620550886358">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="148" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1620550612830" />
-    <state width="1579" height="148" key="GridCell.Tab.0.left" timestamp="1620550612829">
+    <state width="1579" height="148" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1620550886358" />
+    <state width="1579" height="148" key="GridCell.Tab.0.left" timestamp="1620550886357">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="148" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1620550612829" />
-    <state width="1579" height="148" key="GridCell.Tab.0.right" timestamp="1620550612830">
+    <state width="1579" height="148" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1620550886357" />
+    <state width="1579" height="148" key="GridCell.Tab.0.right" timestamp="1620550886358">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="148" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1620550612830" />
+    <state width="1579" height="148" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1620550886358" />
     <state x="689" y="116" key="RollbackChangesDialog" timestamp="1620237757291">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
