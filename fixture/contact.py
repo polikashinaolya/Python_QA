@@ -11,7 +11,7 @@ class ContactHelper:
     def fill_form_contact(self, contact):
         driver = self.app.driver
         # добавляем строковые поля
-        driver.find_element_by_name("firstname").click()
+        #driver.find_element_by_name("firstname").click()
         driver.find_element_by_name("firstname").clear()
         driver.find_element_by_name("firstname").send_keys(contact.firstname)
         driver.find_element_by_name("middlename").click()
@@ -67,21 +67,20 @@ class ContactHelper:
         driver.find_element_by_name("notes").send_keys(contact.notes)
         # добавляем даты
         driver.find_element_by_name("bday").click()
-        driver.find_element_by_css_selector('select[name="bday"] option[value="1"]').click()
+        driver.find_element_by_name("bday").send_keys(contact.bday)
         driver.find_element_by_name("bmonth").click()
-        driver.find_element_by_css_selector('select[name="bmonth"] option[value="January"]').click()
+        driver.find_element_by_name("bmonth").send_keys(contact.bmonth)
         driver.find_element_by_name("byear").click()
         driver.find_element_by_name("byear").clear()
         driver.find_element_by_name("byear").send_keys(contact.byear)
         #добавлякм вторые даты
         driver.find_element_by_name("aday").click()
-        driver.find_element_by_css_selector('select[name="aday"] option[value="1"]').click()
+        driver.find_element_by_name("aday").send_keys(contact.aday)
         driver.find_element_by_name("amonth").click()
-        driver.find_element_by_css_selector('select[name="amonth"] option[value="February"]').click()
+        driver.find_element_by_name("amonth").send_keys(contact.amonth)
         driver.find_element_by_name("ayear").click()
         driver.find_element_by_name("ayear").clear()
         driver.find_element_by_name("ayear").send_keys(contact.ayear)
-
 
     def create(self, contact):
         driver = self.app.driver
