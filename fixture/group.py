@@ -11,6 +11,10 @@ class GroupHelper:
         driver = self.app.driver
         driver.find_element_by_link_text("group page").click()
 
+    def return_to_home_page(self):
+        driver = self.app.driver
+        driver.find_element_by_link_text("home").click()
+
     def create_group(self, group):
         self.open_groups_page()
         driver = self.app.driver
@@ -29,6 +33,7 @@ class GroupHelper:
         # submit create group
         driver.find_element_by_name("submit").click()
         self.return_to_groups_page()
+        self.return_to_home_page()
 
     def delete_first(self):
         driver = self.app.driver
@@ -36,6 +41,7 @@ class GroupHelper:
         driver.find_element_by_name("selected[]").click()
         driver.find_element_by_name("delete").click()
         self.return_to_groups_page()
+        self.return_to_home_page()
 
     def edit_first(self, group):
         driver = self.app.driver
@@ -54,5 +60,6 @@ class GroupHelper:
         driver.find_element_by_name("group_footer").send_keys(group.footer)
         driver.find_element_by_name("update").click()
         self.return_to_groups_page()
+        self.return_to_home_page()
 
 #для дз7
