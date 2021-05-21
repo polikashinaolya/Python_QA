@@ -7,6 +7,11 @@ class ContactHelper:
         driver = self.app.driver
         driver.find_element_by_link_text("add new").click()
 
+    def open_contact_page(self):
+        driver = self.app.driver
+        if driver.current_url is not 'http://localhost/addressbook/':
+            driver.find_element_by_css_selector('div#nav a[href="./"]')
+
     #для заполнения полей
     def fill_form_contact(self, contact):
         driver = self.app.driver
@@ -99,12 +104,14 @@ class ContactHelper:
 
     def delete_first(self):
         driver = self.app.driver
+        self.open_contact_page()
         driver.find_element_by_css_selector('input[name="selected[]"]').click()
         driver.find_element_by_css_selector('input[value="Delete"]').click()
         driver.switch_to_alert().accept()
 
     def edit_first(self, contact):
         driver = self.app.driver
+        self.open_contact_page()
         driver.find_element_by_css_selector('img[title="Edit"]').click()
         self.fill_form_contact(contact)
         driver.find_element_by_name("update").click()

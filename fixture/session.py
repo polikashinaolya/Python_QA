@@ -22,7 +22,7 @@ class SessionHelper:
     def logout(self):
         driver = self.app.driver
         driver.find_element_by_link_text("Logout").click()
-        #sleep(15)
+        sleep(15)
 
     def ensure_logout(self):
         driver = self.app.driver
