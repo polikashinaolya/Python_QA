@@ -62,4 +62,7 @@ class GroupHelper:
         self.return_to_groups_page()
         self.return_to_home_page()
 
-#для дз7
+    def count(self):
+        driver = self.app.driver
+        self.open_groups_page()
+        return len(driver.find_elements_by_name("selected[]"))
