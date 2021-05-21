@@ -22,4 +22,26 @@ class SessionHelper:
     def logout(self):
         driver = self.app.driver
         driver.find_element_by_link_text("Logout").click()
-        sleep(15)
+        #sleep(15)
+
+    def ensure_logout(self):
+        driver = self.app.driver
+        if self.is_logged_in(driver):
+            self.logout()
+
+    def is_logged_in(self, driver):
+        driver = self.app.driver
+        return len(driver.find_elements_by_link_text("Logout")) > 0
+
+    def ensure_login(self, username, password):
+        driver = self.app.driver
+        if self.is_logged_in(username):
+            if self.is_logged_in_as(username):
+                return
+            else:
+                self.logout()
+        self.login(username, password)
+
+    def is_logged_in_as(self, username):
+        driver = self.app.driver
+        return driver.find_element_by_css_selector('form[name="logout"] b').text == '(%s)' % username

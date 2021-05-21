@@ -4,7 +4,7 @@
     <list default="true" id="49140c39-0db8-494b-acd1-291f159b22e1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixture/application.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixture/application.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixture/session.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixture/session.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -335,7 +335,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621417034587</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="повышена интеллектуальность фикстуры: открытие и закрытие браузера защищено от случайного закрытия">
+      <created>1621513379141</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1621513379142</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -377,13 +384,14 @@
     <MESSAGE value="изменила название функций тестов на корректные" />
     <MESSAGE value="изменила название функций тестов на корректные, передачу в селектор непосредствнно из тестового файла" />
     <MESSAGE value="login и logout добавлены в фикстуру. В тестах групп добавлен метод return_to_home_page, чтобы не разлогиниваться между контактами и группой" />
-    <option name="LAST_COMMIT_MESSAGE" value="login и logout добавлены в фикстуру. В тестах групп добавлен метод return_to_home_page, чтобы не разлогиниваться между контактами и группой" />
+    <MESSAGE value="повышена интеллектуальность фикстуры: открытие и закрытие браузера защищено от случайного закрытия" />
+    <option name="LAST_COMMIT_MESSAGE" value="повышена интеллектуальность фикстуры: открытие и закрытие браузера защищено от случайного закрытия" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="460" y="0" key="CommitChangelistDialog2" timestamp="1621417030510">
+    <state x="311" y="0" key="CommitChangelistDialog2" timestamp="1621513376846">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="460" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1621417030510" />
+    <state x="311" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1621513376846" />
     <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1620237603575">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -392,22 +400,22 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="580" y="172" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1619286423342" />
-    <state width="1579" height="148" key="GridCell.Tab.0.bottom" timestamp="1621506067332">
+    <state width="1579" height="148" key="GridCell.Tab.0.bottom" timestamp="1621577525864">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="148" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1621506067332" />
-    <state width="1579" height="148" key="GridCell.Tab.0.center" timestamp="1621506067331">
+    <state width="1579" height="148" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1621577525864" />
+    <state width="1579" height="148" key="GridCell.Tab.0.center" timestamp="1621577525864">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="148" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1621506067331" />
-    <state width="1579" height="148" key="GridCell.Tab.0.left" timestamp="1621506067330">
+    <state width="1579" height="148" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1621577525864" />
+    <state width="1579" height="148" key="GridCell.Tab.0.left" timestamp="1621577525863">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="148" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1621506067330" />
-    <state width="1579" height="148" key="GridCell.Tab.0.right" timestamp="1621506067332">
+    <state width="1579" height="148" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1621577525863" />
+    <state width="1579" height="148" key="GridCell.Tab.0.right" timestamp="1621577525864">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="148" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1621506067332" />
+    <state width="1579" height="148" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1621577525864" />
     <state width="1579" height="276" key="GridCell.Tab.1.bottom" timestamp="1621502989122">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -432,10 +440,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="301" y="73" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1620024247261" />
-    <state x="496" y="254" key="com.intellij.ide.util.TipDialog" timestamp="1620022517797">
+    <state x="496" y="254" key="com.intellij.ide.util.TipDialog" timestamp="1621515969196">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="496" y="254" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1620022517797" />
+    <state x="496" y="254" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1621515969196" />
     <state x="371" y="166" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1621502410591">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
