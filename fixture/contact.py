@@ -5,12 +5,13 @@ class ContactHelper:
    
     def open_create_contact_page(self):
         driver = self.app.driver
-        driver.find_element_by_link_text("add new").click()
+        if not (driver.current_url.endswith('/addressbook/') and len(driver.find_elements_by_link_text("Edit / add")) > 0):
+            driver.find_element_by_link_text("add new").click()
 
     def open_contact_page(self):
         driver = self.app.driver
-        if driver.current_url is not 'http://localhost/addressbook/':
-            driver.find_element_by_css_selector('div#nav a[href="./"]')
+        if not (driver.current_url.endswith('/addressbook/') and len(driver.find_elements_by_name("Send e-Mail")) > 0):
+            driver.find_element_by_css_selector('div#nav a[href="./"]').click()
 
     def fill_form_contact(self, contact):
         driver = self.app.driver
