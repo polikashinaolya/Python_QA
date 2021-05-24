@@ -1,3 +1,5 @@
+from model.contact import Contact
+
 
 class ContactHelper:
     def __init__(self, app):
@@ -88,5 +90,15 @@ class ContactHelper:
         driver = self.app.driver
         return len(driver.find_elements_by_css_selector('input[name="selected[]"]'))
 
-
-
+    def get_contacts_list(self):
+        driver = self.app.driver
+        self.open_contact_page()
+        contacts_list = []
+        for element in driver.find_elements_by_css_selector('table#maintable tr[name="entry"]'):
+            id = element.find_element_by_name("selected[]").get_attribute('value')
+            print(id)
+            lastname = element.find_elements_by_css_selector('td')[1].text
+            print(lastname)
+            firstname = element.find_elements_by_css_selector('td')[2].text
+            contacts_list.append(Contact(id=id, lastname=lastname, firstname=firstname))
+        return contacts_list
