@@ -5,7 +5,8 @@ class ContactHelper:
    
     def open_create_contact_page(self):
         driver = self.app.driver
-        if not (driver.current_url.endswith('/addressbook/') and len(driver.find_elements_by_link_text("Edit / add")) > 0):
+        if not (driver.current_url.endswith('addressbook/edit.php') and len(driver.find_elements_by_css_selector('input[name="photo"]')) > 0):
+            print('open')
             driver.find_element_by_link_text("add new").click()
 
     def open_contact_page(self):
@@ -56,7 +57,6 @@ class ContactHelper:
             driver.find_element_by_name(field_name).send_keys(date)
 
     def create(self, contact):
-        driver = self.app.driver
         self.open_create_contact_page()
         self.fill_form_contact(contact)
         self.confirm_add_contact()

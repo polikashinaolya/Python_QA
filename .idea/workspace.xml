@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="49140c39-0db8-494b-acd1-291f159b22e1" name="Default Changelist" comment="">
+    <list default="true" id="49140c39-0db8-494b-acd1-291f159b22e1" name="Default Changelist" comment="исправлены ошибки в методах open_create_contact_page и open_contact_page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fixture/contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixture/contact.py" afterDir="false" />
     </list>
@@ -43,7 +43,7 @@
       <recent name="B:\PycharmProjects\Python_QA\First_tests" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.pytest in test">
+  <component name="RunManager" selected="Python tests.pytest in test_delete_contact.py">
     <configuration name="pytest in test" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="Python_QA" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -121,11 +121,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.pytest in test_delete_contact.py" />
+        <item itemvalue="Python tests.pytest in test_add_contact.py" />
         <item itemvalue="Python tests.pytest in test" />
         <item itemvalue="Python tests.pytest in test_edit_contact.py" />
-        <item itemvalue="Python tests.pytest in test_add_contact.py" />
         <item itemvalue="Python tests.pytest in test_edit_group.py" />
-        <item itemvalue="Python tests.pytest in test_delete_contact.py" />
       </list>
     </recent_temporary>
   </component>
@@ -369,7 +369,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621626974358</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="исправлены ошибки в методах open_create_contact_page и open_contact_page">
+      <created>1621796985559</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1621796985559</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -387,7 +394,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Первый вариант, не работает добавление картинки" />
     <MESSAGE value="Создан и импортирован класс Contact_str для заполнения строковых полей формы контакта" />
     <MESSAGE value="Создан и импортирован класс Contact_bday для заполнения даты в форме контакта" />
     <MESSAGE value="созданы классы для заполнения строковых полей и даты контакта" />
@@ -412,13 +418,14 @@
     <MESSAGE value="добавленна предпроверка пустого списка контактов и групп для тестов модофикации и удаления" />
     <MESSAGE value="выполнена оптимизация перехода между страницами, заполнение формы contacts вынесено в отдельный метод" />
     <MESSAGE value="в фикстуре добавлен метод change_field_form позволяющий создавать и модифицировать контакты не заполнив все поля" />
-    <option name="LAST_COMMIT_MESSAGE" value="в фикстуре добавлен метод change_field_form позволяющий создавать и модифицировать контакты не заполнив все поля" />
+    <MESSAGE value="исправлены ошибки в методах open_create_contact_page и open_contact_page" />
+    <option name="LAST_COMMIT_MESSAGE" value="исправлены ошибки в методах open_create_contact_page и open_contact_page" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="311" y="0" key="CommitChangelistDialog2" timestamp="1621626971423">
+    <state x="300" y="258" width="1100" height="510" key="CommitChangelistDialog2" timestamp="1621843098685">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="311" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1621626971423" />
+    <state x="300" y="258" width="1100" height="510" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1621843098685" />
     <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1620237603575">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -427,22 +434,22 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="580" y="172" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1619286423342" />
-    <state width="1579" height="148" key="GridCell.Tab.0.bottom" timestamp="1621796797885">
+    <state width="1579" height="148" key="GridCell.Tab.0.bottom" timestamp="1621843135346">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="148" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1621796797885" />
-    <state width="1579" height="148" key="GridCell.Tab.0.center" timestamp="1621796797884">
+    <state width="1579" height="148" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1621843135346" />
+    <state width="1579" height="148" key="GridCell.Tab.0.center" timestamp="1621843135345">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="148" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1621796797884" />
-    <state width="1579" height="148" key="GridCell.Tab.0.left" timestamp="1621796797884">
+    <state width="1579" height="148" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1621843135345" />
+    <state width="1579" height="148" key="GridCell.Tab.0.left" timestamp="1621843135345">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="148" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1621796797884" />
-    <state width="1579" height="148" key="GridCell.Tab.0.right" timestamp="1621796797884">
+    <state width="1579" height="148" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1621843135345" />
+    <state width="1579" height="148" key="GridCell.Tab.0.right" timestamp="1621843135345">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="148" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1621796797884" />
+    <state width="1579" height="148" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1621843135345" />
     <state width="1579" height="276" key="GridCell.Tab.1.bottom" timestamp="1621582236060">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
