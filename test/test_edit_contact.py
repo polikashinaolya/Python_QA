@@ -17,3 +17,5 @@ def test_edit_first_contact(app):
     new_contacts = app.contact.get_contacts_list()
     # проверяем, что длина списка групп не изменилась
     assert len(old_contacts) == len(new_contacts)
+    old_contacts[0:1] = []
+    assert old_contacts == new_contacts
