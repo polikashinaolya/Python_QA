@@ -13,9 +13,12 @@ def test_edit_first_contact(app):
                                    phone2="asdsdfdfas", notes="asqwqdas", bday="1", bmonth="January",
                                    byear="1001", aday="2", amonth="February", ayear="2002"))
         old_contacts = app.contact.get_contacts_list()
-    app.contact.edit_first(Contact(firstname="Olya edit name", phone_home="000000", bday="20", amonth="November"))
+    contacts_test = Contact(firstname="Olya edit name", phone_home="000000", bday="20", amonth="November")
+    contacts_test.id = old_contacts[0].id
+    app.contact.edit_first(contacts_test)
     new_contacts = app.contact.get_contacts_list()
     # проверяем, что длина списка групп не изменилась
     assert len(old_contacts) == len(new_contacts)
-    old_contacts[0:1] = []
-    assert old_contacts == new_contacts
+    # проверяем, что списки групп, измененные программно и через браузер, совпадают
+    old_contacts[0] = contacts_test
+    assert sorted(old_contacts, key=Contact.id_or_max) == sorted(new_contacts, key=Contact.id_or_max)
