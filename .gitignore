@@ -112,3 +112,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+README.md
+.gitignore
+.gitattributes
+userpic.jpg
+.idea
