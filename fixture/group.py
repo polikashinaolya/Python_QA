@@ -42,10 +42,14 @@ class GroupHelper:
             driver.find_element_by_name(field_name).send_keys(text)
 
     def delete_first(self):
+        self.delete_by_index(0)
+
+    def delete_by_index(self, index):
         driver = self.app.driver
         self.open_groups_page()
-        driver.find_element_by_name("selected[]").click()
+        driver.find_elements_by_name("selected[]")[index].click()
         driver.find_element_by_name("delete").click()
+        print('была удалена группа с индексом %s' % index)
         self.return_to_groups_page()
         self.group_cache = None
 

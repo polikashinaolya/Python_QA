@@ -75,12 +75,16 @@ class ContactHelper:
         driver.find_element_by_link_text("home page").click()
 
     def delete_first(self):
+        self.delete_by_index(0)
+
+    def delete_by_index(self, index):
         driver = self.app.driver
         self.open_contact_page()
-        driver.find_element_by_css_selector('input[name="selected[]"]').click()
+        driver.find_elements_by_css_selector('input[name="selected[]"]')[index].click()
         driver.find_element_by_css_selector('input[value="Delete"]').click()
         driver.switch_to_alert().accept()
         self.contact_cache = None
+        print('был удален контакт с индексом %s' % index)
 
     def edit_first(self, contact):
         driver = self.app.driver

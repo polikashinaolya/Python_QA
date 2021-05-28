@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from model.contact import Contact
+from random import randrange
 
 
 def test_delete_first_contact(app):
@@ -11,10 +12,11 @@ def test_delete_first_contact(app):
                                    phone2="asdsdfdfas", notes="asqwqdas", bday="1", bmonth="January",
                                    byear="1001", aday="2", amonth="February", ayear="2002"))
     old_contacts = app.contact.get_contacts_list()
-    app.contact.delete_first()
+    index = randrange(len(old_contacts))
+    app.contact.delete_by_index(index)
     new_contacts = app.contact.get_contacts_list()
     # проверяем, что длина списка групп стала короче
     assert len(old_contacts) - 1 == app.contact.count()
     # проверяем, что список контактов, измененный через программу совпадает со списком, изменненым через браузер
-    old_contacts[0:1] = []
+    old_contacts[index:index+1] = []
     assert old_contacts == new_contacts
