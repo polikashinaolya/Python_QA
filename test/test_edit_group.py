@@ -1,5 +1,5 @@
 from model.group import Group
-
+from random import randrange
 
 def test_edit_first_group(app):
     if app.group.count() == 0:
@@ -7,7 +7,8 @@ def test_edit_first_group(app):
     old_groups = app.group.get_groups_list()
     group_test = Group(name='Olya edit name')
     group_test.id = old_groups[0].id
-    app.group.edit_first(group_test)
+    index = randrange(len(old_groups))
+    app.group.edit_by_index(index, group_test)
     new_groups = app.group.get_groups_list()
     # проверяем, что кол-во групп в списке не изменилось
     assert len(old_groups) == app.group.count()

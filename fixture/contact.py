@@ -87,13 +87,17 @@ class ContactHelper:
         print('был удален контакт с индексом %s' % index)
 
     def edit_first(self, contact):
+        self.edit_by_index(0, contact)
+
+    def edit_by_index(self, index, contact):
         driver = self.app.driver
         self.open_contact_page()
-        driver.find_element_by_css_selector('img[title="Edit"]').click()
+        driver.find_elements_by_css_selector('img[title="Edit"]')[index].click()
         self.fill_form_contact(contact)
         driver.find_element_by_name("update").click()
         self.return_to_home_page()
         self.contact_cache = None
+        print('был отредактирован контакт с индексом %s' % index)
 
     def count(self):
         driver = self.app.driver

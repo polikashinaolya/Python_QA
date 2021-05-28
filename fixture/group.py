@@ -54,14 +54,18 @@ class GroupHelper:
         self.group_cache = None
 
     def edit_first(self, group):
+        self.edit_by_index(0, group)
+
+    def edit_by_index(self, index, group):
         driver = self.app.driver
         self.open_groups_page()
-        driver.find_element_by_name("selected[]").click()
+        driver.find_elements_by_name("selected[]")[index].click()
         driver.find_element_by_name("edit").click()
         self.fill_form_group(group)
         driver.find_element_by_name("update").click()
         self.return_to_groups_page()
         self.group_cache = None
+        print('была отредактирована группа с индексом %s' % index)
 
     def count(self):
         driver = self.app.driver

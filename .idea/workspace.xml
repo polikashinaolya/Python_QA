@@ -5,8 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fixture/contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixture/contact.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fixture/group.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixture/group.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_delete_contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_delete_contact.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_delete_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_delete_group.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_edit_contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_edit_contact.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_edit_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_edit_group.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +46,7 @@
       <recent name="B:\PycharmProjects\Python_QA\First_tests" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.pytest in test_delete_contact.py">
+  <component name="RunManager" selected="Python tests.pytest in test">
     <configuration name="pytest in test" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="Python_QA" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -59,21 +59,6 @@
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;$PROJECT_DIR$/test&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pytest in test_add_group.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="Python_QA" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/test/test_add_group.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
@@ -107,6 +92,21 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="pytest in test_edit_contact.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="Python_QA" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/test/test_edit_contact.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="pytest in test_edit_group.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="Python_QA" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -124,11 +124,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.pytest in test" />
+        <item itemvalue="Python tests.pytest in test_edit_contact.py" />
+        <item itemvalue="Python tests.pytest in test_edit_group.py" />
         <item itemvalue="Python tests.pytest in test_delete_contact.py" />
         <item itemvalue="Python tests.pytest in test_delete_group.py" />
-        <item itemvalue="Python tests.pytest in test" />
-        <item itemvalue="Python tests.pytest in test_edit_group.py" />
-        <item itemvalue="Python tests.pytest in test_add_group.py" />
       </list>
     </recent_temporary>
   </component>
@@ -442,7 +442,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622189386390</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="добавлено удаление случайной группы/контакта">
+      <created>1622204287971</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1622204287971</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -460,7 +467,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="только высокоуровневые проверки" />
     <MESSAGE value="только высокоуровневые проверки (убрала ссылку на драйвер)" />
     <MESSAGE value="создана фикстура для тестов" />
     <MESSAGE value="созданы пакеты для разделения ответственности" />
@@ -485,17 +491,18 @@
     <MESSAGE value="добавлены и исправлены тесты для удаления, прибавления и модификации групп и контактов (first number)" />
     <MESSAGE value="убрала лишнюю перезапись списка контактов и групп" />
     <MESSAGE value="добавлено кэширование и хэширование тестов контактов и групп" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавлено кэширование и хэширование тестов контактов и групп" />
+    <MESSAGE value="добавлено удаление случайной группы/контакта" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавлено удаление случайной группы/контакта" />
   </component>
   <component name="WindowStateProjectService">
     <state x="392" y="89" key="#Inspections" timestamp="1621925689995">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="392" y="89" key="#Inspections/0.0.1600.860@0.0.1600.860" timestamp="1621925689995" />
-    <state x="300" y="258" width="1100" height="510" key="CommitChangelistDialog2" timestamp="1622189385418">
+    <state x="300" y="258" width="1100" height="510" key="CommitChangelistDialog2" timestamp="1622204286330">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="300" y="258" width="1100" height="510" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1622189385418" />
+    <state x="300" y="258" width="1100" height="510" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1622204286330" />
     <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1620237603575">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -504,22 +511,22 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="580" y="172" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1619286423342" />
-    <state width="1579" height="201" key="GridCell.Tab.0.bottom" timestamp="1622198532566">
+    <state width="1579" height="201" key="GridCell.Tab.0.bottom" timestamp="1622205443622">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="201" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1622198532566" />
-    <state width="1579" height="201" key="GridCell.Tab.0.center" timestamp="1622198532566">
+    <state width="1579" height="201" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1622205443622" />
+    <state width="1579" height="201" key="GridCell.Tab.0.center" timestamp="1622205443621">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="201" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1622198532566" />
-    <state width="1579" height="201" key="GridCell.Tab.0.left" timestamp="1622198532565">
+    <state width="1579" height="201" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1622205443621" />
+    <state width="1579" height="201" key="GridCell.Tab.0.left" timestamp="1622205443621">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="201" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1622198532565" />
-    <state width="1579" height="201" key="GridCell.Tab.0.right" timestamp="1622198532566">
+    <state width="1579" height="201" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1622205443621" />
+    <state width="1579" height="201" key="GridCell.Tab.0.right" timestamp="1622205443621">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="201" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1622198532566" />
+    <state width="1579" height="201" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1622205443621" />
     <state width="1579" height="276" key="GridCell.Tab.1.bottom" timestamp="1622187611216">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

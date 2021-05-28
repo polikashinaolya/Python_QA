@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from model.contact import Contact
-
+from random import randrange
 
 def test_edit_first_contact(app):
     if app.contact.count() == 0:
@@ -14,7 +14,8 @@ def test_edit_first_contact(app):
     old_contacts = app.contact.get_contacts_list()
     contacts_test = Contact(firstname="Olya edit name", phone_home="000000", bday="20", amonth="November")
     contacts_test.id = old_contacts[0].id
-    app.contact.edit_first(contacts_test)
+    index = randrange(len(old_contacts))
+    app.contact.edit_by_index(index, contacts_test)
     new_contacts = app.contact.get_contacts_list()
     # проверяем, что длина списка групп не изменилась
     assert len(old_contacts) == app.contact.count()
