@@ -4,6 +4,8 @@ from model.contact import Contact
 class ContactHelper:
     def __init__(self, app):
         self.app = app
+
+    contact_cache = None
    
     def open_create_contact_page(self):
         driver = self.app.driver
@@ -62,6 +64,7 @@ class ContactHelper:
         self.fill_form_contact(contact)
         self.confirm_add_contact()
         self.return_to_home_page()
+        self.contact_cache = None
 
     def confirm_add_contact(self):
         driver = self.app.driver
@@ -77,6 +80,7 @@ class ContactHelper:
         driver.find_element_by_css_selector('input[name="selected[]"]').click()
         driver.find_element_by_css_selector('input[value="Delete"]').click()
         driver.switch_to_alert().accept()
+        self.contact_cache = None
 
     def edit_first(self, contact):
         driver = self.app.driver
@@ -85,6 +89,7 @@ class ContactHelper:
         self.fill_form_contact(contact)
         driver.find_element_by_name("update").click()
         self.return_to_home_page()
+        self.contact_cache = None
 
     def count(self):
         driver = self.app.driver
@@ -92,12 +97,13 @@ class ContactHelper:
         return len(driver.find_elements_by_css_selector('input[name="selected[]"]'))
 
     def get_contacts_list(self):
-        driver = self.app.driver
-        self.open_contact_page()
-        contacts_list = []
-        for element in driver.find_elements_by_css_selector('table#maintable tr[name="entry"]'):
-            id = element.find_element_by_name("selected[]").get_attribute('value')
-            lastname = element.find_elements_by_css_selector('td')[1].text
-            firstname = element.find_elements_by_css_selector('td')[2].text
-            contacts_list.append(Contact(id=id, lastname=lastname, firstname=firstname))
-        return contacts_list
+        if self.contact_cache is None:
+            driver = self.app.driver
+            self.open_contact_page()
+            self.contact_cache = []
+            for element in driver.find_elements_by_css_selector('table#maintable tr[name="entry"]'):
+                id = element.find_element_by_name("selected[]").get_attribute('value')
+                lastname = element.find_elements_by_css_selector('td')[1].text
+                firstname = element.find_elements_by_css_selector('td')[2].text
+                self.contact_cache.append(Contact(id=id, lastname=lastname, firstname=firstname))
+        return list(self.contact_cache)

@@ -14,7 +14,7 @@ def test_delete_first_contact(app):
     app.contact.delete_first()
     new_contacts = app.contact.get_contacts_list()
     # проверяем, что длина списка групп стала короче
-    assert len(old_contacts) - 1 == len(new_contacts)
+    assert len(old_contacts) - 1 == app.contact.count()
     # проверяем, что список контактов, измененный через программу совпадает со списком, изменненым через браузер
     old_contacts[0:1] = []
     assert old_contacts == new_contacts

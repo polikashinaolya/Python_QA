@@ -17,7 +17,7 @@ def test_edit_first_contact(app):
     app.contact.edit_first(contacts_test)
     new_contacts = app.contact.get_contacts_list()
     # проверяем, что длина списка групп не изменилась
-    assert len(old_contacts) == len(new_contacts)
+    assert len(old_contacts) == app.contact.count()
     # проверяем, что списки групп, измененные программно и через браузер, совпадают
     old_contacts[0] = contacts_test
     assert sorted(old_contacts, key=Contact.id_or_max) == sorted(new_contacts, key=Contact.id_or_max)
