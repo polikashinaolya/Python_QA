@@ -16,9 +16,9 @@ def test_edit_first_contact(app):
     contacts_test.id = old_contacts[0].id
     index = randrange(len(old_contacts))
     app.contact.edit_by_index(index, contacts_test)
-    new_contacts = app.contact.get_contacts_list()
     # проверяем, что длина списка групп не изменилась
     assert len(old_contacts) == app.contact.count()
+    new_contacts = app.contact.get_contacts_list()
     # проверяем, что списки групп, измененные программно и через браузер, совпадают
     old_contacts[0] = contacts_test
     assert sorted(old_contacts, key=Contact.id_or_max) == sorted(new_contacts, key=Contact.id_or_max)

@@ -12,9 +12,9 @@ def test_add_contact(app):
                                phone2="asdsdfdfas", notes="asqwqdas", bday="1", bmonth="January",
                                byear="1001", aday="2", amonth="February", ayear="2002")
     app.contact.create(contact_test)
-    new_contacts = app.contact.get_contacts_list()
     # проверяем, что новый список групп стал длиннее
     assert len(old_contacts) + 1 == app.contact.count()
+    new_contacts = app.contact.get_contacts_list()
     # проверяем, что списки контактов, добавленные программно и через браузер, совпадают
     old_contacts.append(contact_test)
     assert sorted(old_contacts, key=Contact.id_or_max) == sorted(new_contacts, key=Contact.id_or_max)
