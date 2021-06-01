@@ -1,5 +1,5 @@
 from model.contact import Contact
-
+import re
 
 class ContactHelper:
     def __init__(self, app):
@@ -18,7 +18,6 @@ class ContactHelper:
             driver.find_element_by_css_selector('div#nav a[href="./"]').click()
 
     def fill_form_contact(self, contact):
-        driver = self.app.driver
         self.change_field_form_string("firstname", contact.firstname)
         self.change_field_form_string("middlename", contact.middlename)
         self.change_field_form_string("lastname", contact.lastname)
@@ -91,13 +90,17 @@ class ContactHelper:
 
     def edit_by_index(self, index, contact):
         driver = self.app.driver
-        self.open_contact_page()
-        driver.find_elements_by_css_selector('img[title="Edit"]')[index].click()
+        self.open_edit_page_by_index(index)
         self.fill_form_contact(contact)
         driver.find_element_by_name("update").click()
         self.return_to_home_page()
         self.contact_cache = None
         print('был отредактирован контакт с индексом %s' % index)
+
+    def open_edit_page_by_index(self, index):
+        driver = self.app.driver
+        self.open_contact_page()
+        driver.find_elements_by_css_selector('img[title="Edit"]')[index].click()
 
     def count(self):
         driver = self.app.driver
@@ -109,9 +112,40 @@ class ContactHelper:
             driver = self.app.driver
             self.open_contact_page()
             self.contact_cache = []
-            for element in driver.find_elements_by_css_selector('table#maintable tr[name="entry"]'):
-                id = element.find_element_by_name("selected[]").get_attribute('value')
-                lastname = element.find_elements_by_css_selector('td')[1].text
-                firstname = element.find_elements_by_css_selector('td')[2].text
-                self.contact_cache.append(Contact(id=id, lastname=lastname, firstname=firstname))
+            for index in range(self.count()):
+                self.contact_cache.append(Contact(id=self.get_contact_info_from_home_page(index).id,
+                                                  lastname=self.get_contact_info_from_home_page(index).lastname,
+                                                  firstname=self.get_contact_info_from_home_page(index).firstname))
         return list(self.contact_cache)
+
+    def get_contact_info_from_edit_page(self, index):
+        driver = self.app.driver
+        self.open_edit_page_by_index(index)
+        id = driver.find_element_by_name("id").get_attribute('value')
+        firstname = driver.find_element_by_name("firstname").get_attribute('value')
+        lastname = driver.find_element_by_name("lastname").get_attribute('value')
+        address = driver.find_element_by_name("address").get_attribute('value')
+        email = driver.find_element_by_name("email").get_attribute('value')
+        email2 = driver.find_element_by_name("email2").get_attribute('value')
+        email3 = driver.find_element_by_name("email3").get_attribute('value')
+        phone_home = driver.find_element_by_name("home").get_attribute('value')
+        phone_mobile = driver.find_element_by_name("mobile").get_attribute('value')
+        phone_work = driver.find_element_by_name("work").get_attribute('value')
+        phone2 = driver.find_element_by_name("phone2").get_attribute('value')
+        all_email = ''.join([email,  email2,  email3])
+        all_phones = ''.join([phone_home,  phone_mobile, phone_work, phone2])
+        return Contact(id=id, firstname=firstname, lastname=lastname, all_address=address, all_email=all_email, all_phones=all_phones)
+
+    def get_contact_info_from_home_page(self, index):
+        driver = self.app.driver
+        self.open_contact_page()
+        contact_info = driver.find_elements_by_css_selector('table#maintable tr[name="entry"]')[index]
+        id = contact_info.find_element_by_name("selected[]").get_attribute('value')
+        [lastname, firstname,  all_address, all_email, all_phones] = map(lambda x: re.sub("\n", '', x),
+        [contact_info.find_elements_by_css_selector('td')[1].text,
+        contact_info.find_elements_by_css_selector('td')[2].text,
+        contact_info.find_elements_by_css_selector('td')[3].text,
+        contact_info.find_elements_by_css_selector('td')[4].text,
+        contact_info.find_elements_by_css_selector('td')[5].text])
+        return Contact(id=id, firstname=firstname, lastname=lastname, all_address=all_address, all_email=all_email,
+                       all_phones=all_phones)
