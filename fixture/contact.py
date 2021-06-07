@@ -1,5 +1,6 @@
 from model.contact import Contact
 import re
+import time
 
 class ContactHelper:
     def __init__(self, app):
@@ -14,7 +15,8 @@ class ContactHelper:
 
     def open_contact_page(self):
         driver = self.app.driver
-        if not (driver.current_url.endswith('/addressbook/') and len(driver.find_elements_by_name("Send e-Mail")) > 0):
+        if not (driver.current_url.endswith('/addressbook/') and
+                len(driver.find_elements_by_css_selector('div.left [value="Send e-Mail"]')) > 0):
             driver.find_element_by_css_selector('div#nav a[href="./"]').click()
 
     def fill_form_contact(self, contact):
@@ -82,6 +84,7 @@ class ContactHelper:
         driver.find_elements_by_css_selector('input[name="selected[]"]')[index].click()
         driver.find_element_by_css_selector('input[value="Delete"]').click()
         driver.switch_to_alert().accept()
+        time.sleep(15)
         self.contact_cache = None
         print('был удален контакт с индексом %s' % index)
 
@@ -132,8 +135,8 @@ class ContactHelper:
         phone_mobile = driver.find_element_by_name("mobile").get_attribute('value')
         phone_work = driver.find_element_by_name("work").get_attribute('value')
         phone2 = driver.find_element_by_name("phone2").get_attribute('value')
-        all_email = '\n'.join([email,  email2,  email3])
-        all_phones = '\n'.join([phone_home,  phone_mobile, phone_work, phone2])
+        all_email = '\n'.join(map(lambda x: x.strip(), [email,  email2,  email3]))
+        all_phones = '\n'.join(map(lambda x: x.strip(), [phone_home,  phone_mobile, phone_work, phone2]))
         return Contact(id=id, firstname=firstname, lastname=lastname, all_address=address, all_email=all_email,
                        all_phones=all_phones)
 

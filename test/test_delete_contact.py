@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
 from model.contact import Contact
 from random import randrange
+import time
 
 
-def test_delete_first_contact(app):
+def test_delete_contact(app):
     if app.contact.count() == 0:
         app.contact.create(Contact(firstname="Olya", middlename="asddas", lastname="fsdas", nickname="bnbdas",
                                    title="asdcvas", company="asdzxas", address="asqwdas", phone_home="123",
