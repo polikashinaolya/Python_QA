@@ -38,7 +38,8 @@ class Contact:
         self.all_phones = all_phones
 
     def __repr__(self):
-        return "%s:%s" %(self.id, self.lastname)
+        return "%s:%s:%s:%s:%s:%s" % (self.id, self.lastname, self.firstname,
+                                      self.company, self.address, self.email)
 
     def __eq__(self, other):
         return (self.id is None or other.id is None or self.id == other.id) and self.lastname == self.lastname

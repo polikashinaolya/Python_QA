@@ -132,20 +132,21 @@ class ContactHelper:
         phone_mobile = driver.find_element_by_name("mobile").get_attribute('value')
         phone_work = driver.find_element_by_name("work").get_attribute('value')
         phone2 = driver.find_element_by_name("phone2").get_attribute('value')
-        all_email = ''.join([email,  email2,  email3])
-        all_phones = ''.join([phone_home,  phone_mobile, phone_work, phone2])
-        return Contact(id=id, firstname=firstname, lastname=lastname, all_address=address, all_email=all_email, all_phones=all_phones)
+        all_email = '\n'.join([email,  email2,  email3])
+        all_phones = '\n'.join([phone_home,  phone_mobile, phone_work, phone2])
+        return Contact(id=id, firstname=firstname, lastname=lastname, all_address=address, all_email=all_email,
+                       all_phones=all_phones)
 
     def get_contact_info_from_home_page(self, index):
         driver = self.app.driver
         self.open_contact_page()
         contact_info = driver.find_elements_by_css_selector('table#maintable tr[name="entry"]')[index]
         id = contact_info.find_element_by_name("selected[]").get_attribute('value')
-        [lastname, firstname,  all_address, all_email, all_phones] = map(lambda x: re.sub("\n", '', x),
-        [contact_info.find_elements_by_css_selector('td')[1].text,
+        [lastname, firstname,  all_address, all_email, all_phones] = [contact_info.find_elements_by_css_selector('td')[1].text,
         contact_info.find_elements_by_css_selector('td')[2].text,
         contact_info.find_elements_by_css_selector('td')[3].text,
         contact_info.find_elements_by_css_selector('td')[4].text,
-        contact_info.find_elements_by_css_selector('td')[5].text])
-        return Contact(id=id, firstname=firstname, lastname=lastname, all_address=all_address, all_email=all_email,
+        contact_info.find_elements_by_css_selector('td')[5].text]
+        return Contact(id=id, firstname=firstname, lastname=lastname, all_address=re.sub("\n", " ", all_address),
+                       all_email=all_email,
                        all_phones=all_phones)
