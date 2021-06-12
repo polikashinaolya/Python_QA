@@ -11,7 +11,7 @@ def app(request):
     global target
     browser = request.config.getoption('--browser')
     if target is None:
-        config_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), request.config.getoption("target"))
+        config_file = request.config.getoption('path_target')
         with open(config_file) as f:
             target = json.load(f)
     if fixture is None or not fixture.is_valid():
@@ -31,4 +31,5 @@ def stop(request):
 
 def pytest_addoption(parser):
     parser.addoption('--browser', action='store', default='firefox')
-    parser.addoption('--target', action='store', default='target.json')
+    #parser.addoption('--target', action='store', default='target.json')
+    parser.addoption('--path_target', action='store', default=os.path.join(os.path.dirname(os.path.abspath(__file__)), "target.json"))
