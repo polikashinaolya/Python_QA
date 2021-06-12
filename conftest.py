@@ -31,5 +31,4 @@ def stop(request):
 
 def pytest_addoption(parser):
     parser.addoption('--browser', action='store', default='firefox')
-    #parser.addoption('--target', action='store', default='target.json')
     parser.addoption('--path_target', action='store', default=os.path.join(os.path.dirname(os.path.abspath(__file__)), "target.json"))
