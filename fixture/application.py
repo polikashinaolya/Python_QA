@@ -23,7 +23,7 @@ class Application:
     def is_valid(self):
         try:
             #self.driver.current_url()
-            self.driver.get("http://localhost/addressbook/")
+            self.driver.get(self.baseUrl)
             return True
         except:
             return False

@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="49140c39-0db8-494b-acd1-291f159b22e1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixture/application.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixture/application.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixture/session.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixture/session.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +45,7 @@
       <recent name="B:\PycharmProjects\Python_QA\First_tests" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.pytest in test_delete_contact.py (1)">
+  <component name="RunManager" selected="Python tests.pytest in test_add_contact.py">
     <configuration name="pytest in test" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="Python_QA" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -60,6 +61,21 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="pytest in test_add_contact.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="Python_QA" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/test/test_add_contact.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="pytest in test_add_group.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="Python_QA" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -72,21 +88,6 @@
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;$PROJECT_DIR$/test/test_add_group.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pytest in test_contact_page_home_vs_edit.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="Python_QA" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/test/test_contact_page_home_vs_edit.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
@@ -123,17 +124,17 @@
     <list>
       <item itemvalue="Python tests.pytest in test_delete_contact.py (1)" />
       <item itemvalue="Python tests.pytest in test" />
-      <item itemvalue="Python tests.pytest in test_contact_page_home_vs_edit.py" />
       <item itemvalue="Python tests.pytest in test_add_group.py" />
       <item itemvalue="Python tests.pytest in test_edit_group.py" />
+      <item itemvalue="Python tests.pytest in test_add_contact.py" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.pytest in test_add_contact.py" />
         <item itemvalue="Python tests.pytest in test_delete_contact.py (1)" />
         <item itemvalue="Python tests.pytest in test_add_group.py" />
         <item itemvalue="Python tests.pytest in test" />
         <item itemvalue="Python tests.pytest in test_edit_group.py" />
-        <item itemvalue="Python tests.pytest in test_contact_page_home_vs_edit.py" />
       </list>
     </recent_temporary>
   </component>
@@ -159,13 +160,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1619286166906</updated>
-    </task>
-    <task id="LOCAL-00001" summary="первый вариант добавления группы">
-      <created>1619420212013</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1619420212014</updated>
     </task>
     <task id="LOCAL-00002" summary="запуск через pytest">
       <created>1619428353166</created>
@@ -496,7 +490,21 @@
       <option name="project" value="LOCAL" />
       <updated>1623428450874</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="путь к конфигу можно указать через консоль с помощью ключа --path_target">
+      <created>1623486867496</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1623486867497</updated>
+    </task>
+    <task id="LOCAL-00050" summary="путь к конфигу можно указать через консоль с помощью ключа --path_target">
+      <created>1623486884177</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1623486884179</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -514,7 +522,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="добавлен тест на удаление первого контакта" />
     <MESSAGE value="добавлен тест на редактирование первого контакта, исправлены ошибки" />
     <MESSAGE value="переделала все на css локаторы без указания порядкового номера выбираемого элемента" />
     <MESSAGE value="изменила название функций тестов на корректные" />
@@ -539,7 +546,8 @@
     <MESSAGE value="добавлена параметризация тестов для создания групп и контактов. Только позитивные тесты" />
     <MESSAGE value="добавлена параметризация тестов для выбора браузера и тестового стенда. Исправлены недочеты" />
     <MESSAGE value="реализована загрузка информации из конфига" />
-    <option name="LAST_COMMIT_MESSAGE" value="реализована загрузка информации из конфига" />
+    <MESSAGE value="путь к конфигу можно указать через консоль с помощью ключа --path_target" />
+    <option name="LAST_COMMIT_MESSAGE" value="путь к конфигу можно указать через консоль с помощью ключа --path_target" />
   </component>
   <component name="WindowStateProjectService">
     <state x="392" y="89" key="#Inspections" timestamp="1622464908160">
@@ -554,10 +562,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="92" y="92" width="1416" height="676" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1600.860@0.0.1600.860" timestamp="1623428301933" />
-    <state x="300" y="258" width="1100" height="510" key="CommitChangelistDialog2" timestamp="1623486866095">
+    <state x="300" y="258" width="1100" height="510" key="CommitChangelistDialog2" timestamp="1623486883240">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="300" y="258" width="1100" height="510" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1623486866095" />
+    <state x="300" y="258" width="1100" height="510" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1623486883240" />
     <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1620237603575">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -566,22 +574,22 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="580" y="172" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1619286423342" />
-    <state width="1579" height="201" key="GridCell.Tab.0.bottom" timestamp="1623485697208">
+    <state width="1579" height="201" key="GridCell.Tab.0.bottom" timestamp="1623566094149">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="201" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1623485697208" />
-    <state width="1579" height="201" key="GridCell.Tab.0.center" timestamp="1623485697207">
+    <state width="1579" height="201" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1623566094149" />
+    <state width="1579" height="201" key="GridCell.Tab.0.center" timestamp="1623566094149">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="201" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1623485697207" />
-    <state width="1579" height="201" key="GridCell.Tab.0.left" timestamp="1623485697207">
+    <state width="1579" height="201" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1623566094149" />
+    <state width="1579" height="201" key="GridCell.Tab.0.left" timestamp="1623566094149">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="201" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1623485697207" />
-    <state width="1579" height="201" key="GridCell.Tab.0.right" timestamp="1623485697207">
+    <state width="1579" height="201" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1623566094149" />
+    <state width="1579" height="201" key="GridCell.Tab.0.right" timestamp="1623566094149">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="201" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1623485697207" />
+    <state width="1579" height="201" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1623566094149" />
     <state width="1579" height="276" key="GridCell.Tab.1.bottom" timestamp="1623061398959">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

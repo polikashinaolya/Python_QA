@@ -1,4 +1,6 @@
 from time import sleep
+
+
 class SessionHelper:
 
     def __init__(self, app):
@@ -6,7 +8,7 @@ class SessionHelper:
 
     def open_homepage(self):
         driver = self.app.driver
-        driver.get("http://localhost/addressbook/")
+        driver.get(self.app.baseUrl)
 
     def login(self, username, password):
         driver = self.app.driver
@@ -22,7 +24,6 @@ class SessionHelper:
     def logout(self):
         driver = self.app.driver
         driver.find_element_by_link_text("Logout").click()
-        sleep(15)
 
     def ensure_logout(self):
         driver = self.app.driver
