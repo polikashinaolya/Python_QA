@@ -26,17 +26,15 @@ class SessionHelper:
         driver.find_element_by_link_text("Logout").click()
 
     def ensure_logout(self):
-        driver = self.app.driver
-        if self.is_logged_in(driver):
+        if self.is_logged_in():
             self.logout()
 
-    def is_logged_in(self, driver):
+    def is_logged_in(self):
         driver = self.app.driver
         return len(driver.find_elements_by_link_text("Logout")) > 0
 
     def ensure_login(self, username, password):
-        driver = self.app.driver
-        if self.is_logged_in(username):
+        if self.is_logged_in():
             if self.is_logged_in_as(username):
                 return
             else:
